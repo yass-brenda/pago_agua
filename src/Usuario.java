@@ -42,10 +42,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Cobrador{" +
+        return "Usuario: " +
                 "nombre='" + nombre + '\'' +
                 ", apPaterno='" + apPaterno + '\'' +
-                ", apMaterno='" + apMaterno + '\'' +
-                '}';
+                ", apMaterno='" + apMaterno + '\'';
     }
 }

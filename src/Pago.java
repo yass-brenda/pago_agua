@@ -1,4 +1,4 @@
-import java.nio.file.attribute.UserDefinedFileAttributeView;
+
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -71,6 +71,14 @@ public class Pago {
         this.usuario = usuario;
     }
 
+
+    public Cobrador getCobrador() {
+        return cobrador;
+    }
+
+    public void setCobrador(Cobrador cobrador) {
+        this.cobrador = cobrador;
+    }
     @Override
     public String toString() {
         return "Pago{" +
@@ -78,8 +86,7 @@ public class Pago {
                 ", conceptoNumero=" + conceptoNumero +
                 ", conceptoLetra='" + conceptoLetra + '\'' +
                 ", numRecibo=" + numRecibo +
-                ", fecha=" + fecha +
-                ", usuario=" + usuario +
+                ", fecha=" + fecha +" " + usuario.toString() + " " + cobrador.toString() +
                 '}';
     }
 }
