@@ -5,9 +5,9 @@ public class Usuario {
     private String apMaterno;
     private int id;
 
-    public Usuario(String nombre,String apPaterno){
+    public Usuario(String nombre,String apMaterno){
         this.nombre = nombre;
-        this.apPaterno = apPaterno;
+        this.apMaterno= apMaterno;
     }
 
     public Usuario(String nombre,String apPaterno,String apMaterno){
@@ -20,24 +20,22 @@ public class Usuario {
         return nombre;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
     public String getApPaterno(){
         return apPaterno;
-    }
-
-    public void setApPaterno(String apPaterno){
-        this.apPaterno = apPaterno;
     }
 
     public String getApMaterno(){
         return apMaterno;
     }
 
-    public void setApMaterno(String apMaterno){
-        this.apMaterno = apMaterno;
+
+    public String getFullName() {
+        if (apPaterno == null) {
+            return nombre + " "  + apMaterno;
+        } else {
+            return nombre + " " + apPaterno + " " + apMaterno;
+        }
+
     }
 
     @Override

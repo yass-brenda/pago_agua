@@ -27,58 +27,30 @@ public class Pago {
         return nombreConcepto;
     }
 
-    public void setNombreConcepto(String nombreConcepto) {
-        this.nombreConcepto = nombreConcepto;
-    }
-
     public int getConceptoNumero() {
         return conceptoNumero;
-    }
-
-    public void setConceptoNumero(int conceptoNumero) {
-        this.conceptoNumero = conceptoNumero;
     }
 
     public String getConceptoLetra() {
         return conceptoLetra;
     }
 
-    public void setConceptoLetra(String conceptoLetra) {
-        this.conceptoLetra = conceptoLetra;
-    }
-
     public int getNumRecibo() {
         return numRecibo;
-    }
-
-    public void setNumRecibo(int numRecibo) {
-        this.numRecibo = numRecibo;
     }
 
     public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     public Usuario getUsuario() {
         return usuario;
     }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
 
     public Cobrador getCobrador() {
         return cobrador;
     }
 
-    public void setCobrador(Cobrador cobrador) {
-        this.cobrador = cobrador;
-    }
     @Override
     public String toString() {
         return "Pago{" +
