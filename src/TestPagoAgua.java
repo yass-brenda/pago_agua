@@ -6,6 +6,7 @@ public class TestPagoAgua {
         System.out.println(usuario.getFullName());
         System.out.println(usuario);
         Pago pago = new Pago("Pago agua", 500,"Quinientos",5,2020,5,1,usuario,cobrador);
-        System.out.println(pago);
+        System.out.println(pago.registroCompletado());
+
     }
 }

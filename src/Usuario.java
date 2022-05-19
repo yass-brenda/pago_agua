@@ -38,6 +38,19 @@ public class Usuario {
 
     }
 
+    public boolean registroCobradorSinApPaterno(){
+        if(nombre == null && apMaterno == null )
+            return false;
+        return true;
+    }
+
+    public boolean registroCobradorConApPaterno(){
+        if(nombre == null && apMaterno == null && apPaterno== null )
+            return false;
+        return true;
+    }
+
+
     @Override
     public String toString() {
         return "Usuario: " +

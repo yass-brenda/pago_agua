@@ -5,9 +5,9 @@ import java.util.GregorianCalendar;
 public class Pago {
 
     private String nombreConcepto;
-    private int conceptoNumero;
+    private Integer conceptoNumero;
     private String conceptoLetra;
-    private int numRecibo;
+    private Integer numRecibo;
     private Date fecha;
     private Usuario usuario;
     private Cobrador cobrador;
@@ -46,9 +46,14 @@ public class Pago {
     public Usuario getUsuario() {
         return usuario;
     }
-
     public Cobrador getCobrador() {
         return cobrador;
+    }
+
+    public boolean registroCompletado(){
+        if(nombreConcepto == null && conceptoLetra == null && conceptoNumero == null && numRecibo==null &&  usuario ==null && cobrador== null && fecha== null)
+            return false;
+        return true;
     }
 
     @Override

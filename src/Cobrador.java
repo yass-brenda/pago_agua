@@ -41,6 +41,18 @@ public class Cobrador {
 
     }
 
+    public boolean registroCobradorSinApPaterno(){
+        if(nombre == null && firma == null && apMaterno == null )
+            return false;
+        return true;
+    }
+
+    public boolean registroCobradorConApPaterno(){
+        if(nombre == null && firma == null && apMaterno == null && apPaterno== null )
+            return false;
+        return true;
+    }
+
     @Override
     public String toString() {
         return "Cobrador : " +
