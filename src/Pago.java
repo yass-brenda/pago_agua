@@ -21,6 +21,10 @@ public class Pago {
         this.cobrador =  cobrador;
         GregorianCalendar calendar = new GregorianCalendar(year,month-1,day);
         fecha = calendar.getTime();
+
+        if (this.nombreConcepto.equals("") || this.conceptoLetra.equals("") || this.usuario.equals("") || this.cobrador.equals("") || this.fecha.equals(""))
+            System.out.println("Alguno de tus datos esta vacio");
+
     }
 
     public String getNombreConcepto() {
@@ -46,6 +50,7 @@ public class Pago {
     public Usuario getUsuario() {
         return usuario;
     }
+
     public Cobrador getCobrador() {
         return cobrador;
     }
