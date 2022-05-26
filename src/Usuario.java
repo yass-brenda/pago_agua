@@ -6,14 +6,15 @@ public class Usuario {
     private String nombre;
     private String apPaterno;
     private String apMaterno;
-    private static int idNext = 1;
     private int id;
-    public List<Usuario>listUsuarios = new ArrayList<Usuario>();
+    private static int idNext = 1;
 
 
     public Usuario(String nombre,String apMaterno){
         this.nombre = nombre;
         this.apMaterno= apMaterno;
+        id  = idNext;
+        idNext++;
     }
 
     public Usuario(String nombre,String apPaterno,String apMaterno){
@@ -37,6 +38,10 @@ public class Usuario {
         return apMaterno;
     }
 
+    public int getId(){
+        return id;
+    }
+
 
     public String getFullName() {
         if (apPaterno == null) {
@@ -47,21 +52,17 @@ public class Usuario {
 
     }
 
-    public boolean registroCobradorSinApPaterno(Usuario usuario){
-        if(usuario.nombre == null && usuario.apMaterno == null ){
-            return false;
-        } else {
-            listUsuarios.add(usuario);
-            return true;
-        }
-    }
-
-    public boolean registroCobradorConApPaterno(){
-        if(nombre == null && apMaterno == null && apPaterno== null )
+    public boolean guardarSinApPaterno(){
+        if(nombre == null && apMaterno == null)
             return false;
         return true;
     }
 
+    public boolean guardarConApPaterno(Usuario usuario){
+        if(nombre == null && apMaterno == null )
+            return false;
+        return true;
+    }
 
     @Override
     public String toString() {

@@ -1,13 +1,25 @@
 public class TestPagoAgua {
     public static void main(String[] args) {
         Cobrador cobrador =  new Cobrador("Ulisses","UlisesB","Barrios", "Becerrra");
-        System.out.println(cobrador);
-        Usuario usuario = new Usuario("Gloria" ,"Becerra");
-         boolean result = usuario.registroCobradorSinApPaterno(usuario);
-        System.out.println(result);
+        //Pago pago = new Pago("Pago agua", 500,"nbb",5,2020,5,1,usuario,cobrador);
 
-        Pago pago = new Pago("Pago agua", 500,"",5,2020,5,1,usuario,cobrador);
-        System.out.println(pago);
+
+        Usuario usuario = new Usuario("Gloria" ,"Becerra");
+        Usuario usuario2 = new Usuario("Diego" ,"Becerra");
+
+
+        ListaUsuario lista = new ListaUsuario();
+        boolean r =  lista.guardarUsuario(usuario);
+        boolean r2 =  lista.guardarUsuario(usuario2);
+        lista.imprimirLista();
+
+        boolean t = lista.buscarName("Juan");
+
+        boolean e = lista.eliminarUsuario(1);
+        lista.imprimirLista();
+
+
+
 
     }
 }
