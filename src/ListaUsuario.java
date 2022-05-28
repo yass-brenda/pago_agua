@@ -39,6 +39,30 @@ public class ListaUsuario {
         return null;
     }
 
+    public Usuario buscarApMaterno(String apMaterno){
+        itUsuario = listUsuarios.listIterator();
+        while (itUsuario.hasNext()){
+            String apMaternoActual = itUsuario.next().getApMaterno();
+            if (apMaternoActual.equals(apMaterno)){
+                return itUsuario.previous();
+            }
+        }
+        return null;
+    }
+
+
+    public boolean editarNombre(int id,String nombre){
+        itUsuario = listUsuarios.listIterator();
+        while(itUsuario.hasNext()){
+            int idactual = itUsuario.next().getId();
+            if(idactual == id){
+                itUsuario.previous().setNombre(nombre);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void imprimirLista(){
         for (Usuario usuario: listUsuarios) {
             System.out.println(usuario);
