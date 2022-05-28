@@ -28,15 +28,15 @@ public class ListaUsuario {
         return false;
     }
 
-    public boolean buscarName(String nombre){
+    public Usuario buscarName(String nombre){
         itUsuario = listUsuarios.listIterator();
         while(itUsuario.hasNext()){
             String nameUserActual = itUsuario.next().getNombre();
             if(nameUserActual.equals(nombre)){
-                return true;
+                return itUsuario.previous();
             }
         }
-        return false;
+        return null;
     }
 
     public void imprimirLista(){

@@ -11,12 +11,12 @@ public class TestPagoAgua {
         ListaUsuario lista = new ListaUsuario();
         boolean r =  lista.guardarUsuario(usuario);
         boolean r2 =  lista.guardarUsuario(usuario2);
-        lista.imprimirLista();
 
-        boolean t = lista.buscarName("Juan");
+
+        System.out.println(lista.buscarName("Gloria"));
 
         boolean e = lista.eliminarUsuario(1);
-        lista.imprimirLista();
+
 
 
 
