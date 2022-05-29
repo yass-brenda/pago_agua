@@ -35,8 +35,16 @@ public class Usuario {
         return apPaterno;
     }
 
+    public void setApPaterno(String apPaterno){
+        this.apPaterno= apPaterno;
+    }
+
     public String getApMaterno(){
         return apMaterno;
+    }
+
+    public void setApMaterno(String apPaterno){
+        this.apPaterno= apPaterno;
     }
 
     public int getId(){

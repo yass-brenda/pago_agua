@@ -13,7 +13,7 @@ public class TestPagoAgua {
         lista.imprimirLista();
         System.out.println("............................................");
 
-        lista.editarNombre(1,"Yasmin");
+        lista.editarApPaterno(2,"Barrios");
         System.out.println("............................................");
 
         lista.imprimirLista();

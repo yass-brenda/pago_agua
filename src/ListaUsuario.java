@@ -1,5 +1,7 @@
+import java.awt.*;
 import java.time.temporal.JulianFields;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -54,9 +56,33 @@ public class ListaUsuario {
     public boolean editarNombre(int id,String nombre){
         itUsuario = listUsuarios.listIterator();
         while(itUsuario.hasNext()){
-            int idactual = itUsuario.next().getId();
-            if(idactual == id){
-                itUsuario.previous().setNombre(nombre);
+            Usuario userActual = itUsuario.next(); // Guardo donde esta el puntero
+            if(userActual.getId() == id){
+                userActual.setNombre(nombre);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean editarApMaterno(int id, String apMaterno){
+        itUsuario = listUsuarios.listIterator();
+        while(itUsuario.hasNext()){
+            Usuario usuarioActual = itUsuario.next();
+            if(usuarioActual.getId() == id){
+                usuarioActual.setApMaterno(apMaterno);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean editarApPaterno(int id, String apPaterno){
+        itUsuario = listUsuarios.listIterator();
+        while (itUsuario.hasNext()){
+            Usuario usuarioActual = itUsuario.next();
+            if(usuarioActual.getId() == id){
+                usuarioActual.setApPaterno(apPaterno);
                 return true;
             }
         }
