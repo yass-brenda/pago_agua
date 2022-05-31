@@ -4,16 +4,17 @@ public class TestPagoAgua {
         //Pago pago = new Pago("Pago agua", 500,"nbb",5,2020,5,1,usuario,cobrador);
 
         Usuario usuario = new Usuario("Gloria" ,"Becerra");
-        Usuario usuario2 = new Usuario("Diego" ,"Becerra");
-
+        Usuario usuario2 = new Usuario("Diego" ,"Barrios","Becerra");
 
         ListaUsuario lista = new ListaUsuario();
         boolean r =  lista.guardarUsuario(usuario);
         boolean r2 =  lista.guardarUsuario(usuario2);
         lista.imprimirLista();
+
         System.out.println("............................................");
 
-        lista.editarApPaterno(2,"Barrios");
+        System.out.println(lista.buscarFullName("Aranda"));
+
         System.out.println("............................................");
 
         lista.imprimirLista();

@@ -52,6 +52,18 @@ public class ListaUsuario {
         return null;
     }
 
+    public List<Usuario> buscarFullName(String cadena){
+        itUsuario = listUsuarios.listIterator();
+        List<Usuario> listaConCadena  = new ArrayList<Usuario>();
+        while (itUsuario.hasNext()){
+            Usuario usuarioActual = itUsuario.next();
+            if(usuarioActual.getFullName().contains(cadena)){
+                listaConCadena.add(usuarioActual);
+            }
+        }
+        return listaConCadena;
+    }
+
 
     public boolean editarNombre(int id,String nombre){
         itUsuario = listUsuarios.listIterator();
