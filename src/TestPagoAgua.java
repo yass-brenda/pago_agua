@@ -2,10 +2,22 @@ public class TestPagoAgua {
     public static void main(String[] args) {
 
         Concepto concepto =  new Concepto("Pago agua","Pago de agua mensual");
-        System.out.println(concepto);
-        ListaConcepto listaConcepto = new ListaConcepto();
+        Concepto concepto1 =  new Concepto("cuota 50","Pago para pagar el pozo ");
 
-        System.out.println(listaConcepto.agregarConcepto(concepto));
+        ListaConcepto listaConcepto = new ListaConcepto();
+        listaConcepto.agregarConcepto(concepto1);
+        listaConcepto.agregarConcepto(concepto);
+
+        System.out.println("--------------------------------------");
+        listaConcepto.imprimir();
+        System.out.println("--------------------------------------");
+
+        listaConcepto.eliminar(1);
+
+
+        System.out.println("--------------------------------------");
+        listaConcepto.imprimir();
+
         /**
         Pago pago = new Pago("Pago agua", 500,"nbb",5,2020,5,1,usuario,cobrador);
 

@@ -15,8 +15,24 @@ public class ListaConcepto {
         return listaConcepto.add(concepto);
     }
 
+    public boolean eliminar(int id){
+        itConcepto = listaConcepto.listIterator();
+        while (itConcepto.hasNext()){
+            Concepto conceptoActual = itConcepto.next();
+            if(conceptoActual.getId() == id){
+                listaConcepto.remove(conceptoActual);
+                return true;
+            }
+        }
+        return false;
+    }
 
-    // eliminar
+    public void imprimir(){
+        for (Concepto concepto: listaConcepto)  {
+            System.out.println(concepto);
+        }
+    }
+
     // editar
 
 }

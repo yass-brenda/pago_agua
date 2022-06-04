@@ -20,6 +20,14 @@ public class Concepto {
         id ++;
     }
 
+    public void setId(int id){
+        this.id = idNext;
+    }
+
+    public int getId(){
+        return id;
+    }
+
     @Override
     public String toString(){
         return  id + " " + nombreConcepto + " " +descripcion + " " ;
