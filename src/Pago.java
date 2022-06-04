@@ -1,7 +1,6 @@
 
 import java.util.Date;
 import java.util.GregorianCalendar;
-
 public class Pago {
 
     private String nombreConcepto;
