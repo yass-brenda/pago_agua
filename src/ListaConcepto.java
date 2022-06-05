@@ -33,6 +33,29 @@ public class ListaConcepto {
         }
     }
 
-    // editar
+    public Concepto editarNombre(int id, String nombre){
+        itConcepto = listaConcepto.listIterator();
+        while (itConcepto.hasNext()){
+            Concepto conceptoActual = itConcepto.next();
+            if(conceptoActual.getId() == id){
+                conceptoActual.setNombreConcepto(nombre);
+                return conceptoActual;
+            }
+        }
+        return null;
+    }
+
+    public Concepto editarDescripcion(int id, String descripcion){
+        itConcepto = listaConcepto.listIterator();
+        while (itConcepto.hasNext()){
+            Concepto conceptoActual = itConcepto.next();
+            if(conceptoActual.getId() == id){
+                conceptoActual.setDescripcion(descripcion);
+                return conceptoActual;
+            }
+        }
+        return null;
+    }
+
 
 }

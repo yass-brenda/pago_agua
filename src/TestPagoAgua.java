@@ -12,7 +12,7 @@ public class TestPagoAgua {
         listaConcepto.imprimir();
         System.out.println("--------------------------------------");
 
-        listaConcepto.eliminar(1);
+        listaConcepto.editarNombre(1 ,"Luz");
 
 
         System.out.println("--------------------------------------");

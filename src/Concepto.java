@@ -2,30 +2,34 @@ public class Concepto {
 
     private String nombreConcepto;
     private String descripcion;
-    private  int id = 1;
-    private int idNext;
+    private  int id ;
+    private static int idNext = 1;
 
 
     public Concepto(String nombreConcepto, String descripcion){
         this.nombreConcepto = nombreConcepto;
         this.descripcion = descripcion;
-        idNext = id;
-        id ++;
+         id = idNext;
+        idNext++;
     }
 
 
     public Concepto(String nombreConcepto){
         this.nombreConcepto = nombreConcepto;
-        idNext = id;
-        id ++;
-    }
-
-    public void setId(int id){
-        this.id = idNext;
+        id = idNext;
+        idNext++;
     }
 
     public int getId(){
         return id;
+    }
+
+    public void setNombreConcepto(String nombreConcepto){
+        this.nombreConcepto = nombreConcepto;
+    }
+
+    public void setDescripcion(String descripcion){
+        this.descripcion = descripcion;
     }
 
     @Override
