@@ -1,25 +1,28 @@
 
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Pago {
 
     private String nombreConcepto;
     private Integer conceptoNumero;
     private String conceptoLetra;
     private Integer numRecibo;
-    private Date fecha;
+    private static int  numReciboSiguiente = 1;
+    private String fecha;
     private Usuario usuario;
     private Cobrador cobrador;
 
-    public Pago(String nombreConcepto, int conceptoNumero, String conceptoLetra, int numRecibo, int year,int month,int day, Usuario usuario,Cobrador cobrador){
+    public Pago(String nombreConcepto, int conceptoNumero, String conceptoLetra, int agno, int mes, int dia, Usuario usuario, Cobrador cobrador){
         this.nombreConcepto = nombreConcepto;
         this.conceptoLetra = conceptoLetra;
         this.conceptoNumero = conceptoNumero;
-        this.numRecibo = numRecibo;
         this.usuario  = usuario;
         this.cobrador =  cobrador;
-        GregorianCalendar calendar = new GregorianCalendar(year,month-1,day);
-        fecha = calendar.getTime();
+        numRecibo = numReciboSiguiente;
+        numReciboSiguiente++;
+        fecha = new SimpleDateFormat("yyyy/MM/dd").format(Calendar.getInstance().getTime());
+
 
         if (this.nombreConcepto.equals("") || this.conceptoLetra.equals("") || this.usuario.equals("") || this.cobrador.equals("") || this.fecha.equals(""))
             System.out.println("Alguno de tus datos esta vacio");
@@ -42,7 +45,7 @@ public class Pago {
         return numRecibo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
@@ -53,6 +56,8 @@ public class Pago {
     public Cobrador getCobrador() {
         return cobrador;
     }
+
+
 
     public boolean registroCompletado(){
         if(nombreConcepto == null && conceptoLetra == null && conceptoNumero == null && numRecibo==null &&  usuario ==null && cobrador== null && fecha== null)

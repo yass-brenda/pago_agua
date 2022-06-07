@@ -1,25 +1,18 @@
 public class TestPagoAgua {
     public static void main(String[] args) {
+        Cobrador cobrador = new Cobrador("Gloria" ,"Becerra","Gloria Becerra");
+        Usuario usuario = new Usuario("Diego Ulisses" ,"Barrios","Becerr");
 
-        Concepto concepto =  new Concepto("Pago agua","Pago de agua mensual");
-        Concepto concepto1 =  new Concepto("cuota 50","Pago para pagar el pozo ");
+        Pago pago = new Pago("Pago agua", 500,"nbb",5,2020,5,usuario,cobrador);
+        Pago pago2 = new Pago("Pago agua", 500,"nbb",5,2020,5,usuario,cobrador);
+        Pago pago3 = new Pago("Pago agua", 500,"nbb",5,2020,5,usuario,cobrador);
 
-        ListaConcepto listaConcepto = new ListaConcepto();
-        listaConcepto.agregarConcepto(concepto1);
-        listaConcepto.agregarConcepto(concepto);
-
-        System.out.println("--------------------------------------");
-        listaConcepto.imprimir();
-        System.out.println("--------------------------------------");
-
-        listaConcepto.editarNombre(1 ,"Luz");
-
-
-        System.out.println("--------------------------------------");
-        listaConcepto.imprimir();
+        System.out.println(pago);
+        System.out.println(pago2);
+        System.out.println(pago3);
 
         /**
-        Pago pago = new Pago("Pago agua", 500,"nbb",5,2020,5,1,usuario,cobrador);
+
 
         Cobrador cobrador = new Cobrador("Gloria" ,"Becerra","Gloria Becerra");
         Cobrador cobrador1 = new Cobrador("Diego Ulisses" ,"Barrios","Becerra", "D. Ulisses B.B");
@@ -35,6 +28,23 @@ public class TestPagoAgua {
 
         System.out.println("............................................");
         listaCobrador.imprimir();
+
+         Concepto concepto =  new Concepto("Pago agua","Pago de agua mensual");
+         Concepto concepto1 =  new Concepto("cuota 50","Pago para pagar el pozo ");
+
+         ListaConcepto listaConcepto = new ListaConcepto();
+         listaConcepto.agregarConcepto(concepto1);
+         listaConcepto.agregarConcepto(concepto);
+
+         System.out.println("--------------------------------------");
+         listaConcepto.imprimir();
+         System.out.println("--------------------------------------");
+
+         listaConcepto.editarNombre(1 ,"Luz");
+
+
+         System.out.println("--------------------------------------");
+         listaConcepto.imprimir();
         **/
 
 
